@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="customerFormApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="form.css" />
+  <title>Customer Information Form</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="CustomerFormController">
+    <div class="body">
+  <h1 class=>Customer Information Form</h1>
+
+  <form ng-submit="submitForm()">
+  
+    <div>
+      <label for="Father name"> First name</label>
+      <input id="Father name" ng-model="formData.Father name" type="text" required />
+    </div>
+    <div>
+      <label for="mother name"> Last name</label>
+      <input id="mother name" ng-model="formData.mother name" type="text" required />
+    </div>
+ <div>
+      <label for="email">Email</label>
+      <input id="email" ng-model="formData.email" type="email" required />
+    </div>
+
+    <div>
+      <label for="phoneNumber">Phone Number</label>
+      <input id="phoneNumber" ng-model="formData.phoneNumber" type="tel" required />
+    </div>
+
+    <div>
+      <label for="address">Address</label>
+      <input id="address" ng-model="formData.address.streetAddress" type="text" placeholder="Street Address" required />
+      <input id="address2" ng-model="formData.address.streetAddressLine2" type="text" placeholder="Street Address Line 2" />
+      <input id="city" ng-model="formData.address.city" type="text" placeholder="City" required />
+      <input id="state" ng-model="formData.address.state" type="text" placeholder="State / Province" required />
+      <input id="postalCode" ng-model="formData.address.postalCode" type="text" placeholder="Postal / Zip Code" required />
+    </div>
+
+    <div>
+      <label for="numberOfAdults">Number of Adults</label>
+      <input id="numberOfAdults" ng-model="formData.numberOfAdults" type="number" required />
+    </div>
+
+    <div>
+      <label for="numberOfChildren">Number of Children</label>
+      <input id="numberOfChildren" ng-model="formData.numberOfChildren" type="number" required />
+    </div>
+    
+    <div>
+      <label for="Children Name">Children Name </label>
+      <input id="Children Name" ng-model="formData.Children Name" type="text" required />
+    </div>
+    
+    <div>
+      <label for="childrenAges">Children Ages</label>
+      <input id="childrenAges" ng-model="formData.childrenAges" type="text" />
+    </div>
+
+    <div>
+      <label for="gender">Gender</label>
+      <input id="male" ng-model="formData.gender" type="radio" value="male" required />
+      <label for="male">Male</label>
+      <input id="female" ng-model="formData.gender" type="radio" value="female" required />
+      <label for="female">Female</label>
+    </div>
+
+    <div>
+      <label for="vacationStartDate">Vacation Start Date (MM-DD-YYYY)</label>
+      <input id="vacationStartDate" ng-model="formData.vacationStartDate" type="date" required />
+    </div>
+
+    <div>
+      <label for="vacationEndDate">Vacation End Date (MM-DD-YYYY)</label>
+      <input id="vacationEndDate" ng-model="formData.vacationEndDate" type="date" required />
+    </div>
+
+ <div>
+      <label for="airTravel">Air Travel</label>
+      <input id="airTravel" ng-model="formData.airTravel.departureCity" type="text" placeholder="Departure City" required />
+      <input id="airlinePreference" ng-model="formData.airTravel.airlinePreference" type="text" placeholder="Airline Preference (Frequent Flyer Programs)" />
+    </div>
+
+    <div>
+      <label for="packageTour">Package Tour</label>
+      <input id="packageTour" ng-model="formData.packageTour" type="text" />
+    </div>
+<div class="final-contn">
+    <button type="submit">Submit</button> 
+    <a href="/payment.html" class="Home1" ng-click="Home()">Pay Now</a>
+</div>
+</div>
+  </form>
+ 
+
+  <script>
+    angular.module('customerFormApp', [])
+      .controller('CustomerFormController', function($scope) {
+        $scope.formData = {};
+
+        $scope.submitForm = function() {
+          console.log($scope.formData);
+          alert("Booked Successful!");
+                alert("Have a Happy n Safe journey!!!")
+        };
+        $scope.Home=function(){
+                $window.location.href = 'payment.html';
+            }
+      });
+  </script>
+</body>
+
+</html>
