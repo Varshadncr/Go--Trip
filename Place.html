@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="goTripApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Descriptions</title>
+    <link rel="stylesheet" href="place.css">
+    
+</head>
+
+<body ng-controller="MainController">
+    <!-- Place Descriptions -->
+    
+        <section class="places" id="Sectionpackage">
+            <!-- Place Cards -->
+            <div class="cards">
+                <div class="card" ng-repeat="place in places1">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img ng-src="{{place.image}}">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span class="rating">{{place.rating}}</span>
+                        <h2>{{place.title}}</h2>
+                        <p class="cost">{{place.description}}</p>
+                        <div class="card-box">
+                            <p class="time">{{place.duration}}</p>
+                            
+                            <a href="/form.html" class="book" ng-click="bookTrip()">book</a>
+                                  </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Second set of places -->
+        <section class="places">
+            <!-- Place Cards -->
+            <div class="cards">
+                <div class="card" ng-repeat="place in places2">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img ng-src="{{place.image}}">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span class="rating">{{place.rating}}</span>
+                        <h2>{{place.title}}</h2>
+                        <p class="cost">{{place.description}}</p>
+                        <div class="card-box">
+                            <p class="time">{{place.duration}}</p>
+                            <a href="/form.html" class="book" ng-click="bookTrip()">book</a>
+
+                                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- First set of places -->
+        <section class="places">
+            <!-- Place Cards -->
+            <div class="cards">
+                <div class="card" ng-repeat="place in places3">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img ng-src="{{place.image}}">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span class="rating">{{place.rating}}</span>
+                        <h2>{{place.title}}</h2>
+                        <p class="cost">{{place.description}}</p>
+                        <div class="card-box">
+                            <p class="time">{{place.duration}}</p>
+                            <a href="/form.html" class="book" ng-click="bookTrip()">book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Second set of places -->
+        <section class="places">
+            <!-- Place Cards -->
+            <div class="cards">
+                <div class="card" ng-repeat="place in places4">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img ng-src="{{place.image}}">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span class="rating">{{place.rating}}</span>
+                        <h2>{{place.title}}</h2>
+                        <p class="cost">{{place.description}}</p>
+                        <div class="card-box">
+                            <p class="time">{{place.duration}}</p>
+                            <a href="/form.html" class="book" ng-click="bookTrip()">book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="/tour.html" class="Home1" ng-click="Home()">Home</a>
+    
+
+    <!-- AngularJS Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module('goTripApp', []);
+
+        app.controller('MainController', function ($scope) {
+            $scope.places1 = [
+    { 
+        title: "Vijyanagara",
+        rating: "⭐⭐⭐⭐⭐",
+        description: "Hampi is an ancient village located in the northern part of Karnataka. It was once the capital of the Vijayanagara Empire and is now a UNESCO World Heritage Site known for its ruins, temples, and monuments.",
+        location: "✈ Jindal Vijaynagar Airport",
+        image: "https://res.cloudinary.com/da41qeo0g/image/upload/v1709009633/6906b10d717424d4796b37995605d23f_btvafl.jpg",
+        mapLink: "http://tinyurl.com/vijaynagarairport"
+    },
+    // Repeat for other places
+];
+
+            $scope.places2 = [
+                { title: "Baglkot", rating: "⭐⭐⭐⭐⭐", description: "Badami, formerly known as Vatapi, is a town located in the Bagalkot district of Karnataka. It is renowned for its ancient rock-cut temples, cave temples, and intricate sculptures.",  location: "✈ Hubballi Airport", image: "https://res.cloudinary.com/da41qeo0g/image/upload/v1709009786/Badami-Pattadakal-Aihole-Route-Map_rmwfcs.jpg" ,  mapLink: "http://tinyurl.com/huballiairport"},
+                // Repeat for other places
+            ];
+            $scope.places3 = [
+                { title: "Mysore", rating: "⭐⭐⭐⭐⭐", description: "Mysore is a city located in the southern part of the state of Karnataka. It is famous for its rich cultural heritage, majestic palaces, and intricately designed temples.",  location: "✈ Mandakalli Airport", image: "https://res.cloudinary.com/da41qeo0g/image/upload/v1709009872/Schematic_tourist_map_of_Mysore_ikquy2.jpg", mapLink: "http://tinyurl.com/mysoresirport" },
+                // Repeat for other places
+            ];
+            $scope.places4 = [
+                { title: "Bengaluru", rating: "⭐⭐⭐⭐⭐", description: "Bengaluru, officially known as Bengaluru, is the capital of the Indian state of Karnataka. It is known for its pleasant climate throughout the year, vibrant nightlife, and booming IT industry.",  location: "✈ Kempegowda International Airport", image: "https://res.cloudinary.com/da41qeo0g/image/upload/v1709009701/bfd4db1ce811d9e32717aaa61f35e043_cotrhg.jpg" , mapLink: "http://tinyurl.com/bengaluruairport"},
+                // Repeat for other places
+            ];
+            $scope.bookTrip = function () {
+                // Logic for booking trip
+                $window.location.href = 'form.html';
+            };
+            $scope.Home=function(){
+                $window.location.href = 'tour.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
