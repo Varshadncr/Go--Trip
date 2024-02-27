@@ -1,0 +1,104 @@
+body{
+    background-image: linear-gradient(#aac9ce,#b6b4c2,#c9bbc8,#e5c1cd,#f3dbcf);
+    background-size: cover;
+}
+
+
+.places-text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .places-text small {
+    font-family: Roboto;
+    color: #ffc342;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  
+  .places-text h2 {
+    font-family: Barlow Condensed;
+    font-size: 55px;
+    color: #191d34;
+    letter-spacing: 1px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 45%;
+    height: 30%;
+    justify-items: center;
+    margin: 5px;
+    
+    justify-content: center;
+  }
+  
+  .card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .cards .text {
+    padding: 20px;
+    font-family: Barlow Condensed;
+    line-height: 50px;
+  }
+  
+  .cards .card-box {
+    display: flex;
+    flex-flow: row;
+    background-color: #fde02f;
+    font-size: 18px;
+    font-family: Roboto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .cards .time {
+    flex: 1;
+  }
+  
+  .cards .location {
+    flex: 2;
+  }
+  
+  .cards .cost {
+    color:black;
+    font-size: 20px;
+  }
+
+  .book{
+    text-align: center;
+    background-color: rgb(86, 180, 133);
+    height: 35px;
+    width: 100px;
+    align-items: center;
+    border-radius: 5px;
+    border-width: 0px;
+  }
+  .but-cont{
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Home1{
+    font-size: medium;
+    background-color: transparent;
+    color: black;
+  }
